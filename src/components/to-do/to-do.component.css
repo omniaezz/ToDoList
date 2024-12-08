@@ -1,0 +1,90 @@
+:root{
+    --primary-color:rgba(224, 127, 52, 0.698) ;
+}
+
+.btn-primary,.btn-primary:active{
+    background-color: rgba(224, 127, 52, 0.698);
+    border-color: rgba(224, 127, 52, 0.698);
+}
+
+.form-control:focus{
+    border-color: rgba(224, 127, 52, 0.698);
+    box-shadow: 0 0 5px rgba(211, 138, 82, 0.698);
+}
+
+.btn-secondary,.btn-secondary:active{
+    background-color: rgba(224, 160, 111, 0.698);
+    border-color: rgba(224, 160, 111, 0.698);
+}
+
+.btn-delete,.btn-delete:active{
+    background-color: rgba(81, 50, 26, 0.698);
+}
+
+table{
+    --bs-table-bg:rgba(140, 80, 31, 0.698);
+    --bs-table-color:white;
+    width:85%;
+    margin: auto;
+    text-align: center;
+}
+
+.py-5 {
+    padding-top: 6rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.popup-content {
+    background: rgba(227, 146, 84, 0.85);
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.saveBtn , .cancelBtn{
+   background-color: rgba(81, 50, 26, 0.698);
+   color: white;
+   padding: 8px;
+   border-radius: 8px;
+   border-color: rgba(224, 160, 111, 0.698);
+}
+
+.saveBtn{
+    background-color: rgba(192, 125, 73, 0.698);
+}
+
+.cancelBtn{
+    background-color: rgba(81, 50, 26, 0.698);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(183, 174, 174);
+}
+
+input[type="checkbox"] {
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+    accent-color: rgba(215, 144, 90, 0.698);
+}
+
+.check{
+    vertical-align: middle;
+}
+

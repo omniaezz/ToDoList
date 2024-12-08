@@ -1,0 +1,48 @@
+
+<div class="container py-5 w-75">
+    <div class="w-75 m-auto">
+        <form>
+            <div class="row">
+                <div class="col-10">
+                    <div class="form-group">
+                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="newTask" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Task">
+                      </div>
+                </div>
+                <div class="col-2">
+                    <button (click)="add()" type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+          </form>
+    </div>
+
+    @if(available){
+      <div class="m-auto">
+        <table class="table mt-5">
+            <tbody>
+              @for (task of tasks; track $index) {
+                <tr>
+                  <td [class.completed]="completed[$index]">{{ task }}</td>
+                  <td class="check text-center">
+                    <input type="checkbox" [checked]="completed[$index]" (change)="toggleTaskCompletion($index)" />
+                  </td>
+                  <td><button (click)="openEditPopup($index, task)" class="btn btn-secondary">Edit</button></td>
+                  <td><button (click)="delete($index)" class="btn btn-secondary btn-delete">Delete</button></td>
+                </tr>
+              }
+            </tbody>
+        </table>
+    </div>
+    }
+</div>
+
+<!-- Popup -->
+ @if(editMode){
+  <div class="popup text-white">
+    <div class="popup-content">
+      <label for="updatedTask">Update Task :</label>
+      <input class="ms-1" [(ngModel)]="updatedTask" id="updatedTask" type="text" />
+      <button class="ms-3 saveBtn" (click)="updateTask()">Save</button>
+      <button class="ms-1 cancelBtn" (click)="closePopup()">Cancel</button>
+    </div>
+  </div>
+ }
